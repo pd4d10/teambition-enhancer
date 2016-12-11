@@ -18,22 +18,26 @@ gulp.task('copy.license', () => gulp
   .pipe(gulp.dest('chrome'))
 )
 
-gulp.task('copy.dev', () => gulp
+gulp.task('dev', ['clean'], () => gulp
   .src('contentscript.js')
   .pipe(gulp.dest('chrome/dist'))
 )
 
 gulp.task('build', () => gulp
   .src('contentscript.js')
-  .pipe(uglify())
+  .pipe(uglify({
+    compress: {
+      drop_console: true,
+    }
+  }))
   .pipe(gulp.dest('chrome/dist'))
 )
 
-gulp.task('default', ['copy.lib'], () => gulp
-  .watch('contentscript.js', ['copy.dev'])
+gulp.task('default', ['copy.lib', 'dev'], () => gulp
+  .watch('contentscript.js', ['dev'])
 )
 
-gulp.task('release', ['copy.lib', 'copy.license'], () => gulp
+gulp.task('release', ['copy.lib', 'copy.license', 'build'], () => gulp
   .src('chrome')
   .pipe(zip('extension.zip'))
   .pipe(gulp.dest(''))
