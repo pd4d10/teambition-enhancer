@@ -2,11 +2,8 @@
   "name": "teambition-enhancer",
   "version": "1.0.0",
   "description": "Enhance Teambition.",
-  "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -19,9 +16,13 @@
   },
   "homepage": "https://github.com/pd4d10/teambition-enhancer#readme",
   "devDependencies": {
-    "babel-core": "^6.17.0",
-    "babel-preset-latest": "^6.16.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2"
+    "gulp-uglify": "^2.0.0",
+    "gulp-zip": "^3.2.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "toastr": "^2.1.2"
   }
 }
