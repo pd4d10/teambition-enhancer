@@ -13,6 +13,7 @@
       "js": [
         "dist/jquery.min.js",
         "dist/toastr.min.js",
+        "dist/clipboard.min.js",
         "dist/contentscript.js"
       ],
       "run-at": "document_idle"

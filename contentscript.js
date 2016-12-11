@@ -1,14 +1,17 @@
 var TIMEOUT = 500
 var RETRY_MAX_TIME = 5
-var currentTaskId = ''
 
-var $copyDOM = $('<a href="#" class="btn url-handler" style="color: #">Copy Task URL</a>')
+var $copyDOM = $('<a href="javascript:" class="btn url-handler" style="color: #fff">Copy Task URL</a>')
 
+// Prevent default click event
 $copyDOM.on('click', function () {
-  toastr.success('Task ID: ' + currentTaskId + '\nURL Copyed to clipboard')
   return false
 })
 
+var clipboard = new Clipboard($copyDOM[0])
+clipboard.on('success', function () {
+  toastr.success('Task URL Copyed to clipboard')
+})
 
 function append(count) {
   count = count || 1
@@ -37,7 +40,8 @@ $('body').on('click', [
   '.calendar-view .is-task', // Calendar
   // '.inbox-view .message-view', // Notifications
 ].join(','), function () {
-  currentTaskId = $(this).data('id')
+  var currentTaskId = $(this).data('id')
+  $copyDOM.attr('data-clipboard-text', currentTaskId)
   console.log('Current task ID: ' + currentTaskId)
   setTimeout(append, TIMEOUT)
 })
