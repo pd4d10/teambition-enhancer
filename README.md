@@ -10,6 +10,8 @@ When opening task in 'Me' or 'Calendar', it is tough to get url of this task. Th
 
 Install it from Chrome Web Store:
 
+https://chrome.google.com/webstore/detail/teambition-enhancer/nlbbfgbmmcpenmfigioafabgagacoake
+
 ## License
 
 MIT
