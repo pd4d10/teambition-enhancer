@@ -1,7 +1,7 @@
 var TIMEOUT = 500
 var RETRY_MAX_TIME = 5
 
-var $copyDOM = $('<a href="javascript:" class="btn url-handler" style="color: #eee">Copy Task URL</a>')
+var $copyDOM = $('<a href="javascript:" class="btn url-handler">Copy Task URL</a>')
 
 // Prevent default click event
 $copyDOM.on('click', function () {

@@ -40,7 +40,7 @@ gulp.task('default', ['copy.lib', 'dev'], () => gulp
 )
 
 gulp.task('zip', () => gulp
-  .src('chrome')
+  .src('chrome/**/*')
   .pipe(zip('extension.zip'))
   .pipe(gulp.dest(''))
 )
