@@ -68,6 +68,11 @@ $('body').on('click', [
   var currentTaskId = $(this).data('id')
   console.log('Current task ID: ' + currentTaskId)
 
+  if (typeof currentTaskId === 'undefined') {
+    console.log('Can\'t find task id')
+    return
+  }
+
   var $this = $(this)
   var type
   if ($this.hasClass('message-view')) {
