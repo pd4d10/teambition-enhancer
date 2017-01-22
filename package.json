@@ -1,6 +1,6 @@
 {
   "name": "teambition-enhancer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Copy Teambition task link URL",
   "scripts": {
     "start": "gulp",
