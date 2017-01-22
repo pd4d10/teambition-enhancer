@@ -3,7 +3,8 @@
   "version": "1.1.1",
   "description": "Copy Teambition task link URL",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "release": "gulp release"
   },
   "repository": {
     "type": "git",
