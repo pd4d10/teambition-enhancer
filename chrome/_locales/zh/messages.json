@@ -1,0 +1,8 @@
+{
+  "button": {
+    "message": "复制任务地址"
+  },
+  "success": {
+    "message": "任务地址已复制到剪贴板"
+  }
+}

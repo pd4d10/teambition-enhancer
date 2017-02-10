@@ -1,7 +1,7 @@
 var TIMEOUT = 500
 var RETRY_MAX_TIME = 5
 
-var $copyDOM = $('<a href="#" class="btn url-handler">Copy Task URL</a>')
+var $copyDOM = $('<a href="#" class="btn url-handler">' + chrome.i18n.getMessage('button') + '</a>')
 
 // Prevent default click event
 $copyDOM.on('click', function () {
@@ -11,7 +11,7 @@ $copyDOM.on('click', function () {
 // Init clipboard
 var clipboard = new Clipboard($copyDOM[0])
 clipboard.on('success', function () {
-  toastr.success('Task URL Copyed to clipboard')
+  toastr.success(chrome.i18n.getMessage('success'))
 })
 
 // Append copy button

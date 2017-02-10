@@ -1,0 +1,8 @@
+{
+  "button": {
+    "message": "Copy Task URL"
+  },
+  "success": {
+    "message": "Task URL Copyed to clipboard"
+  }
+}
