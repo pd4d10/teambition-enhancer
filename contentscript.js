@@ -26,7 +26,7 @@ function append(taskId, type, count) {
 
   var $parent
   if (type === 'notifications') {
-    $parent = $('.detail-header')
+    $parent = $('.inbox-title-view>div')
   } else if (type === 'projects') {
     $parent = $('<div class="object-nav"></div>').appendTo($('.object-modal-view'))
   } else {
